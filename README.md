@@ -7,9 +7,9 @@
 
 # MORELO (MRL)
 
-Copyright (c) 2019-2020 The Morelo Network.    
-Copyright (c) 2018-2020 The Arqma Network.    
-Copyright (c) 2014-2020 The Monero Project.  
+Copyright (c) 2019-2021 The Morelo Network.    
+Copyright (c) 2018-2021 The Arqma Network.    
+Copyright (c) 2014-2021 The Monero Project.  
 Portions Copyright (c) 2012-2013 The Cryptonote developers.
 
 ## BlockChain Specifications
@@ -19,7 +19,7 @@ Network properties:
 - Ticker: MRL
 - Max supply: 75 ml
 - Pre: 3.5 ml
-- Block time: 120 seconds after v16: 60 seconds
+- Block time: 60 seconds (120 before v16 hardfork)
 - Decimals: 9
 - Algorithm: RandomARQ
 - Consensus: PoW
@@ -28,19 +28,17 @@ Network properties:
 
 ## Morelo resources
 
-- Website: http://morelo-network.com/
-- Block Explorer: https://mrl.supportcryptonight.com/
-- Source: https://github.com/morelo-network/morelo
-- Software: https://github.com/morelo-network/morelo/releases
+- Website: https://morelo-network.com/
+- Block Explorer: https://explorer.morelo-network.com
+- Source: https://github.com/MoreloNetwork/morelo
+- Software: https://github.com/MoreloNetwork/morelo
 - Discord: https://discord.gg/eRZUjdG
-- Telegram: https://t.me/morelomrl
 - BitcoinTalk: https://bitcointalk.org/index.php?topic=5233023
-- Twitter: https://twitter.com/MoreloMrl
 
 ## EXCHANGE & TRADE
 
-- BKEX.Com: https://www.bkex.com/trade/MRL_USDT
-- Coinbig.com: https://www.coinbig.com/pl/trade/MRL_USDT
+- KuangEx: https://www.kuangex.com/trade/mrl_usdt
+- Asymetrex: https://asymetrex.com/markets/mrlbtc
 
 ## Mining MRL
 
