@@ -59,4 +59,4 @@ jobs:
       with:
         name: ${{ matrix.toolchain.name }}
         path: |
-          /home/runner/work/arqma/arqma/build/${{ matrix.toolchain.host }}/release/bin/arqma*
+          /home/runner/work/morelo/morelo/build/${{ matrix.toolchain.host }}/release/bin/morelo*
