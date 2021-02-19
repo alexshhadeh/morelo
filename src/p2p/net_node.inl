@@ -482,6 +482,7 @@ namespace nodetool
       full_addrs.insert("188.68.232.9:38411"); //global kris
       full_addrs.insert("84.1.59.84:38411"); //cryptosyphon
       full_addrs.insert("46.29.20.19:38411"); //mssca
+      full_addrs.insert("5.172.219.175:38411"); //sniper
     }
     return full_addrs;
   }
