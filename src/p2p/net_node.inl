@@ -462,27 +462,16 @@ namespace nodetool
     std::set<std::string> full_addrs;
     if (nettype == cryptonote::TESTNET)
     {
-      full_addrs.insert("5.172.219.174:47461"); //nl
-      full_addrs.insert("164.68.123.118:47461"); // eu
-      full_addrs.insert("188.68.232.9:47461"); //global
     }
     else if (nettype == cryptonote::STAGENET)
     {
-      full_addrs.insert("5.172.219.174:46461"); //nl
-      full_addrs.insert("164.68.123.118:46461"); //eu
-      full_addrs.insert("188.68.232.9:46461"); //global
     }
     else if (nettype == cryptonote::FAKECHAIN)
     {
     }
     else
     {
-      full_addrs.insert("5.172.219.174:38411"); //nl sniper
-      full_addrs.insert("164.68.123.118:38411"); //eu a
-      full_addrs.insert("188.68.232.9:38411"); //global kris
-      full_addrs.insert("84.1.59.84:38411"); //cryptosyphon
-      full_addrs.insert("46.29.20.19:38411"); //mssca
-      full_addrs.insert("5.172.219.175:38411"); //sniper
+      full_addrs.insert("127.0.0.1:38001"); //localhost test
     }
     return full_addrs;
   }
