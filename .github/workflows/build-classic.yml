@@ -17,7 +17,7 @@ jobs:
       uses: actions/upload-artifact@master
       with:
         name: macos
-        path: 'build/**/**/morelo*'
+        path: 'build/**/**/inbacoin*'
 
   build-windows:
     runs-on: windows-latest
@@ -43,7 +43,7 @@ jobs:
       uses: actions/upload-artifact@master
       with:
         name: windows
-        path: 'build/**/**/morelo*'
+        path: 'build/**/**/inbacoin*'
 
   build-ubuntu:
     runs-on: ubuntu-latest
@@ -60,7 +60,7 @@ jobs:
         echo "Acquire::ftp::Timeout \"120\";" | sudo tee -a /etc/apt/apt.conf.d/80-custom
     - name: update apt
       run: sudo apt update
-    - name: install morelo dependencies
+    - name: install inbacoin dependencies
       run: sudo apt -y install build-essential cmake libboost-all-dev graphviz doxygen libunwind8-dev pkg-config libssl-dev libsodium-dev libhidapi-dev libusb-1.0-0-dev gperf libreadline-dev
     - name: build
       run: make release -j2
@@ -68,7 +68,7 @@ jobs:
       uses: actions/upload-artifact@master
       with:
         name: linux
-        path: 'build/**/**/morelo*'
+        path: 'build/**/**/inbacoin*'
 
   build-ubuntu-depends:
     runs-on: ubuntu-latest
@@ -83,7 +83,7 @@ jobs:
         echo "Acquire::ftp::Timeout \"120\";" | sudo tee -a /etc/apt/apt.conf.d/80-custom
     - name: update apt
       run: sudo apt update
-    - name: install morelo dependencies
+    - name: install inbacoin dependencies
       run: sudo apt -y install build-essential cmake libboost-all-dev graphviz doxygen libunwind8-dev pkg-config libssl-dev libsodium-dev libhidapi-dev libusb-1.0-0-dev gperf libreadline-dev
     - name: build
       run: make depends target=x86_64-linux-gnu -j2
@@ -91,7 +91,7 @@ jobs:
       uses: actions/upload-artifact@master
       with:
         name: linux-static
-        path: 'build/x86_64-linux-gnu/release/bin/morelo*'
+        path: 'build/x86_64-linux-gnu/release/bin/inbacoin*'
 
   build-dpends-compat:
     runs-on: ubuntu-latest
@@ -106,7 +106,7 @@ jobs:
         echo "Acquire::ftp::Timeout \"120\";" | sudo tee -a /etc/apt/apt.conf.d/80-custom
     - name: update apt
       run: sudo apt update
-    - name: install morelo dependencies
+    - name: install inbacoin dependencies
       run: sudo apt -y install build-essential cmake libboost-all-dev graphviz doxygen libunwind8-dev pkg-config libssl-dev libsodium-dev libhidapi-dev libusb-1.0-0-dev gperf libreadline-dev
     - name: build
       run: make depends-compat target=x86_64-linux-gnu -j2
@@ -114,4 +114,4 @@ jobs:
       uses: actions/upload-artifact@master
       with:
         name: linux-compat
-        path: 'build/x86_64-linux-gnu-compat/release/bin/morelo*'
+        path: 'build/x86_64-linux-gnu-compat/release/bin/inbacoin*'

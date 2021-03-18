@@ -59,4 +59,4 @@ jobs:
       with:
         name: ${{ matrix.toolchain.name }}
         path: |
-          /home/runner/work/morelo/morelo/build/${{ matrix.toolchain.host }}/release/bin/morelo*
+          /home/runner/work/inbacoin/inbacoin/build/${{ matrix.toolchain.host }}/release/bin/inbacoin*

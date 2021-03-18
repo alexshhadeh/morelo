@@ -188,24 +188,24 @@ RUN set -ex && \
     rm -rf /var/lib/apt
 COPY --from=builder /src/build/release/bin /usr/local/bin/
 
-# Below command is creating Morelo user to do not run daemon as a root
-RUN adduser --system --group --disabled-password morelo && \
-	mkdir -p /wallet /home/morelo/.morelo && \
-	chown -R morelo:morelo /home/morelo/.morelo && \
-	chown -R morelo:morelo /wallet
+# Below command is creating InbaCoin user to do not run daemon as a root
+RUN adduser --system --group --disabled-password inbacoin && \
+	mkdir -p /wallet /home/inbacoin/.inbacoin && \
+	chown -R inbacoin:inbacoin /home/inbacoin/.inbacoin && \
+	chown -R inbacoin:inbacoin /wallet
 
 # Contains the blockchain
-VOLUME /home/morelo/.morelo
+VOLUME /home/inbacoin/.inbacoin
 
 # Generate your wallet via accessing the container and run:
 # cd /wallet
-# morelo-wallet-cli
+# inbacoin-wallet-cli
 VOLUME /wallet
 
 EXPOSE 42461
 EXPOSE 42462
 
-# switch to user morelo
-USER morelo
+# switch to user inbacoin
+USER inbacoin
 
-ENTRYPOINT ["morelod", "--p2p-bind-ip=0.0.0.0", "--p2p-bind-port=42461", "--rpc-bind-ip=0.0.0.0", "--rpc-bind-port=42462", "--non-interactive", "--confirm-external-bind"]
+ENTRYPOINT ["inbacoind", "--p2p-bind-ip=0.0.0.0", "--p2p-bind-port=42461", "--rpc-bind-ip=0.0.0.0", "--rpc-bind-port=42462", "--non-interactive", "--confirm-external-bind"]

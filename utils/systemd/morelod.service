@@ -1,19 +1,19 @@
 [Unit]
-Description=Morelo Full Node
+Description=InbaCoin Full Node
 After=network.target
 
 [Service]
-User=morelo
-Group=morelo
+User=inbacoin
+Group=inbacoin
 WorkingDirectory=~
-RuntimeDirectory=morelo
+RuntimeDirectory=inbacoin
 
 # Clearnet config
 #
 Type=forking
-PIDFile=/run/morelo/morelod.pid
-ExecStart=/usr/bin/morelod --config-file /etc/morelod.conf \
-    --detach --pidfile /run/morelo/morelod.pid
+PIDFile=/run/inbacoin/inbacoind.pid
+ExecStart=/usr/bin/inbacoind --config-file /etc/inbacoind.conf \
+    --detach --pidfile /run/inbacoin/inbacoind.pid
 
 # Tor config
 #
@@ -27,7 +27,7 @@ ExecStart=/usr/bin/morelod --config-file /etc/morelod.conf \
 ## host in the LAN, VPN, etc, the RPC must bind to 0.0.0.0, but
 ## by default torsocks only allows binding to localhost.
 #Environment=TORSOCKS_ALLOW_INBOUND=1
-#ExecStart=/usr/bin/torsocks /usr/bin/morelod --config-file /etc/morelod.conf \
+#ExecStart=/usr/bin/torsocks /usr/bin/inbacoind --config-file /etc/inbacoind.conf \
 #    --non-interactive
 
 Restart=always

@@ -124,7 +124,7 @@ if(IOS)
     include(CMakeLists_IOS.txt)
 endif()
 
-project(morelo
+project(inbacoin
   VERSION 5.1.0
   LANGUAGES CXX C)
 
