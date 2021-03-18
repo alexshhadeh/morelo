@@ -8,7 +8,7 @@
 # InbaCoin (INC)
 
 Copyright (c) 2021 The InbaCoin Network.    
-Copyright (c) 2019-2021 The InbaCoin Network.    
+Copyright (c) 2019-2021 The Morelo Network.    
 Copyright (c) 2018-2021 The Arqma Network.    
 Copyright (c) 2014-2021 The Monero Project.  
 Portions Copyright (c) 2012-2013 The Cryptonote developers.
