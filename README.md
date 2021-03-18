@@ -1,12 +1,13 @@
 <p align="center">
-  <a href="http://morelo.is-great.net/">
+  <a href=">
     <img src="https://i.imgur.com/piFNWIo.png" alt="Logo" align="center" width="25%">
   </a>
 </p>
 
 
-# MORELO (MRL)
+# InbaCoin (INC)
 
+Copyright (c) 2021 The InbaCoin
 Copyright (c) 2019-2021 The Morelo Network.    
 Copyright (c) 2018-2021 The Arqma Network.    
 Copyright (c) 2014-2021 The Monero Project.  
@@ -15,49 +16,41 @@ Portions Copyright (c) 2012-2013 The Cryptonote developers.
 ## BlockChain Specifications
 
 Network properties:
-- Name: MORELO
-- Ticker: MRL
-- Max supply: 75 ml
-- Pre: 3.5 ml
-- Block time: 60 seconds (120 before v16 hardfork)
+- Name: InbaCoin
+- Ticker: INC
+- Max supply: X
+- Pre: X
+- Block time: X
 - Decimals: 9
 - Algorithm: RandomARQ
 - Consensus: PoW
 - Anonymity: BulletProof RingCT
 - Governance Fee: 10%
 
-## Morelo resources
+## InbaCoin resources
 
-- Website: https://morelo-network.com/
-- Block Explorer: https://explorer.morelo-network.com
-- Source: https://github.com/MoreloNetwork/morelo
-- Software: https://github.com/MoreloNetwork/morelo
-- Discord: https://discord.gg/eRZUjdG
-- BitcoinTalk: https://bitcointalk.org/index.php?topic=5233023
+- Website: X
+- Block Explorer: X
+- Source: https://github.com/alexshhadeh/InbaCoin
+- Software: https://github.com/alexshhadeh/InbaCoin/releases
+- Discord: x
+- BitcoinTalk: x
 
 ## EXCHANGE & TRADE
 
-- KuangEx: https://www.kuangex.com/trade/mrl_usdt
-- Asymetrex: https://asymetrex.com/markets/mrlbtc
+x
 
-## Mining MRL
+## Mining InbaCoin
 
-- Dev's pool: http://pool.morelo-network.com/
-- Pool's Stats: https://miningpoolstats.stream/morelo
+x
 
 ## Community Links
 
-- CoinMarketCap: https://coinmarketcap.com/currencies/morelo/
-- CoinGecko: https://www.coingecko.com/en/coins/morelo
-- Cryptunit: https://www.cryptunit.com/coin/MRL
-- Coinstat.app: https://coinstats.app/en/coins/morelo
-- CMC.io: https://cmc.io/coins/morelo
-- Walemo: http://www.walemo.com/1582.html
-- Niubiquan: http://niubiquan.com/article/2895
+x
 
-## MORELO Introduction
+## InbaCoin Introduction
 
-Morelo is a private, secure, untraceable, decentralised digital currency. You are your bank, you control your funds, and nobody can trace your transfers unless you allow them to do so.
+InbaCoin is a private, secure, untraceable, decentralised digital currency. You are your bank, you control your funds, and nobody can trace your transfers unless you allow them to do so.
 
 **Privacy:** Morelo uses a cryptographically sound system to allow you to send and receive funds without your transactions being easily revealed on the blockchain (the ledger of transactions that everyone has). This ensures that your purchases, receipts, and all transfers remain absolutely private by default.
 
