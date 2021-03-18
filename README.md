@@ -156,7 +156,7 @@ Install all dependencies at once on OSX:
 
 Clone recursively to pull-in needed submodule(s):
 
-`$ git clone https://github.com/inbacoin-network/inbacoin`
+`$ git clone https://github.com/alexshhadeh/InbaCoin`
 
 If you already have a repo cloned, initialize and update:
 
