@@ -52,9 +52,9 @@
 #define BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW_V9            BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW_V2
 
 // MONEY_SUPPLY - total number coins to be generated
-#define MONEY_SUPPLY                                    ((uint64_t)75000000000000000)
-#define EMISSION_SPEED_FACTOR_PER_MINUTE                (21)
-#define EMISSION_SPEED_FACTOR_V16                       (20)
+#define MONEY_SUPPLY                                    ((uint64_t)50000000000000000)
+#define EMISSION_SPEED_FACTOR_PER_MINUTE                (19)
+#define EMISSION_SPEED_FACTOR_V16                       (19)
 #define FINAL_SUBSIDY_PER_MINUTE                        ((uint64_t)300000000)
 
 
@@ -204,17 +204,17 @@ namespace config
    uint64_t const BASE_REWARD_CLAMP_THRESHOLD = ((uint64_t)100000);
    std::string const P2P_REMOTE_DEBUG_TRUSTED_PUB_KEY = "0000000000000000000000000000000000000000000000000000000000000000";
 
-   uint64_t const CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 0x1a29e1; // Wallet prefix: emo MainNet
-   uint64_t const CRYPTONOTE_PUBLIC_INTEGRATED_ADDRESS_BASE58_PREFIX = 0x8a8e1; // Wallet prefix: emi MainNet
-   uint64_t const CRYPTONOTE_PUBLIC_SUBADDRESS_BASE58_PREFIX = 0xeaae1; // Wallet prefix: ems MainNet
-   uint16_t const P2P_DEFAULT_PORT = 38411;
-   uint16_t const RPC_DEFAULT_PORT = 38422;
-   uint16_t const ZMQ_DEFAULT_PORT = 38433;
+   uint64_t const CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 0x69f9; // Wallet prefix: inc MainNet
+   uint64_t const CRYPTONOTE_PUBLIC_INTEGRATED_ADDRESS_BASE58_PREFIX = 0x15e9f9; // Wallet prefix: ind MainNet
+   uint64_t const CRYPTONOTE_PUBLIC_SUBADDRESS_BASE58_PREFIX = 0x6a79; // Wallet prefix: ine MainNet
+   uint16_t const P2P_DEFAULT_PORT = 38001;
+   uint16_t const RPC_DEFAULT_PORT = 38002;
+   uint16_t const ZMQ_DEFAULT_PORT = 38003;
    boost::uuids::uuid const NETWORK_ID = { {
-       0x11, 0x11, 0x11, 0x11, 0xFF, 0xFF, 0xFF, 0x11, 0x44, 0x11, 0xFF, 0xFF, 0xFF, 0x55, 0x11, 0x1B
+       0xC2, 0x1F, 0x21, 0xA1, 0xFF, 0xFF, 0xF1, 0x11, 0x44, 0x11, 0xCF, 0xFF, 0xFF, 0x56, 0x13, 0x1B
      } }; // 
-   std::string const GENESIS_TX = "011201ff00011e026bc5c7db8a664f652d78adb587ac4d759c6757258b64ef9cba3c0354e64fb2e42101abca6a39c561d0897be183eb0143990eba201aa7d2c652ab0555d28bb4b70728";
-   uint32_t const GENESIS_NONCE = 38411;
+   std::string const GENESIS_TX = "";
+   uint32_t const GENESIS_NONCE = 38001;
 
    namespace testnet
    {
@@ -244,13 +244,13 @@ namespace config
 
    namespace blockchain_settings
    {
-     const uint64_t INBACOIN_PREMINE = 3500000000000000;
+     const uint64_t INBACOIN_PREMINE = 300000000000000;
      const uint64_t PREMINE_BURN = 0; // Will need to be set after knowing exact amount.
      const uint64_t MAXIMUM_BLOCK_SIZE_LIMIT = 2 * 1024 * 1024; // It is set to 2048kB (2MB)
      const uint64_t MINIMUM_BLOCK_SIZE_LIMIT = 1 * 1024 * 1024; // It is set to 1024kB (1MB)
      const uint8_t INBACOIN_GENESIS_BLOCK_MAJOR_VERSION = 1;
      const uint8_t INBACOIN_GENESIS_BLOCK_MINOR_VERSION = 1;
-     const uint8_t INBACOIN_BLOCK_UNLOCK_CONFIRMATIONS = 18; // How many blocks mined are needed to unlock block_reward.
+     const uint8_t INBACOIN_BLOCK_UNLOCK_CONFIRMATIONS = 10; // How many blocks mined are needed to unlock block_reward.
    }
 
    namespace tx_settings
@@ -270,9 +270,9 @@ namespace config
 
    namespace governance
    {
-     static constexpr const char* MAINNET_WALLET_ADDRESS = "emo1hsdY9BLhGUUZqFqNUgGowHwEcW9LzQ9kjN8GJrqbBhXe6L37gZ5Y2pa8eNRiyzabyP8ScDyi2hcbzH4akSvE8SuYr1dFeX";
-     static constexpr const char* TESTNET_WALLET_ADDRESS = "eto1UJjpbxTgM2kzrQNgrkazZLCyhGvcHaoFvsHypZ8JdvsXFQ9kb6zEMAxxJrkzBWKx1ZgxArfgiTudcrUvFBya7EwgQiftGn";
-     static constexpr const char* STAGENET_WALLET_ADDRESS = "exoiwUAF2AEDC8oniRiMXKEkmsLEtw7XNVm2Lc2NJsejU4nN2zWrCF9cjrPgEgUeiHLQ8gNkwyoHVRmkGpS87Eqh4G1yAjseHF";
+     static constexpr const char* MAINNET_WALLET_ADDRESS = "x";
+     static constexpr const char* TESTNET_WALLET_ADDRESS = "x";
+     static constexpr const char* STAGENET_WALLET_ADDRESS = "x";
    }
 }
 
