@@ -38,8 +38,8 @@
 #include <boost/thread/recursive_mutex.hpp>
 #include <boost/uuid/uuid.hpp>
 
-#undef MORELO_DEFAULT_LOG_CATEGORY
-#define MORELO_DEFAULT_LOG_CATEGORY "cn.block_queue"
+#undef INBACOIN_DEFAULT_LOG_CATEGORY
+#define INBACOIN_DEFAULT_LOG_CATEGORY "cn.block_queue"
 
 namespace cryptonote
 {

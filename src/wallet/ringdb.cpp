@@ -37,8 +37,8 @@
 #include "wallet_errors.h"
 #include "ringdb.h"
 
-#undef MORELO_DEFAULT_LOG_CATEGORY
-#define MORELO_DEFAULT_LOG_CATEGORY "wallet.ringdb"
+#undef INBACOIN_DEFAULT_LOG_CATEGORY
+#define INBACOIN_DEFAULT_LOG_CATEGORY "wallet.ringdb"
 
 static const char zerokey[8] = {0};
 static const MDB_val zerokeyval = { sizeof(zerokey), (void *)zerokey };

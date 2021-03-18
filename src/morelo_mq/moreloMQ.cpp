@@ -43,7 +43,7 @@
 // THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
-#include "moreloMQ.h"
+#include "inbacoinMQ.h"
 #include <cstdint>
 #include <system_error>
 
@@ -60,29 +60,29 @@ using namespace epee;
 #include "p2p/net_node.h"
 #include "version.h"
 
-#undef MORELO_DEFAULT_LOG_CATEGORY
-#define MORELO_DEFAULT_LOG_CATEGORY "daemon.zmq"
+#undef INBACOIN_DEFAULT_LOG_CATEGORY
+#define INBACOIN_DEFAULT_LOG_CATEGORY "daemon.zmq"
 
-namespace moreloMQ
+namespace inbacoinMQ
 {
 
 	 extern "C" void message_buffer_destroy(void*, void* hint) {
  		delete reinterpret_cast<std::string*>(hint);
 	}
 
-	zmq::message_t MoreloNotifier::create_message(std::string &&data)
+	zmq::message_t InbacoinNotifier::create_message(std::string &&data)
 	{
 		auto *buffer = new std::string(std::move(data));
 		return zmq::message_t(&(*buffer)[0], buffer->size(), message_buffer_destroy, buffer);
 	}
 
-    MoreloNotifier::MoreloNotifier(ZmqHandler& h): handler(h)
+    InbacoinNotifier::InbacoinNotifier(ZmqHandler& h): handler(h)
     {}
 
-    MoreloNotifier::~MoreloNotifier()
+    InbacoinNotifier::~InbacoinNotifier()
     {}
 
-	void MoreloNotifier::stop()
+	void InbacoinNotifier::stop()
 	{
 		producer.send(create_message(std::move("QUIT")), 0);
 		proxy_thread.join();
@@ -91,13 +91,13 @@ namespace moreloMQ
         zmq_term(&context);
 	}
 
-    void MoreloNotifier::run()
+    void InbacoinNotifier::run()
     {
         producer.bind("inproc://backend");
-        proxy_thread = std::thread{&MoreloNotifier::proxy_loop, this};
+        proxy_thread = std::thread{&InbacoinNotifier::proxy_loop, this};
     }
 
-    bool MoreloNotifier::addTCPSocket(boost::string_ref address, boost::string_ref port, uint16_t clients)
+    bool InbacoinNotifier::addTCPSocket(boost::string_ref address, boost::string_ref port, uint16_t clients)
     {
         if(address.empty())
             address = "*";
@@ -112,7 +112,7 @@ namespace moreloMQ
 		remotes.max_size = clients;
         return true;
     }
-    void MoreloNotifier::proxy_loop()
+    void InbacoinNotifier::proxy_loop()
     {
         subscriber.connect("inproc://backend");
         listener.setsockopt<int>(ZMQ_ROUTER_HANDOVER, 1);

@@ -44,8 +44,8 @@ extern "C"
 #include "multiexp.h"
 #include "bulletproofs.h"
 
-#undef MORELO_DEFAULT_LOG_CATEGORY
-#define MORELO_DEFAULT_LOG_CATEGORY "bulletproofs"
+#undef INBACOIN_DEFAULT_LOG_CATEGORY
+#define INBACOIN_DEFAULT_LOG_CATEGORY "bulletproofs"
 
 //#define DEBUG_BP
 

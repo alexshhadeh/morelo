@@ -35,9 +35,9 @@ set(serialization_headers)
 set(serialization_private_headers
   json_object.h)
 
-morelo_private_headers(serialization
+inbacoin_private_headers(serialization
   ${serialization_private_headers})
-morelo_add_library(serialization
+inbacoin_add_library(serialization
   ${serialization_sources}
   ${serialization_headers}
   ${serialization_private_headers})

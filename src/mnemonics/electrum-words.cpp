@@ -63,8 +63,8 @@
 #include "language_base.h"
 #include "singleton.h"
 
-#undef MORELO_DEFAULT_LOG_CATEGORY
-#define MORELO_DEFAULT_LOG_CATEGORY "mnemonic"
+#undef INBACOIN_DEFAULT_LOG_CATEGORY
+#define INBACOIN_DEFAULT_LOG_CATEGORY "mnemonic"
 
 namespace crypto
 {

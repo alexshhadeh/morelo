@@ -35,13 +35,13 @@ if(WIN32 OR STATIC)
   add_definitions(-DMINIUPNP_STATICLIB)
 endif()
 
-function(morelo_private_headers group)
+function(inbacoin_private_headers group)
   source_group("${group}\\Private"
     FILES
       ${ARGN})
 endfunction()
 
-function(morelo_install_headers subdir)
+function(inbacoin_install_headers subdir)
   install(
     FILES       ${ARGN}
     DESTINATION "include/${subdir}"
@@ -59,7 +59,7 @@ function(enable_stack_trace target)
   endif()
 endfunction()
 
-function(morelo_add_executable name)
+function(inbacoin_add_executable name)
   source_group("${name}"
     FILES
       ${ARGN})
@@ -78,31 +78,31 @@ function(morelo_add_executable name)
   enable_stack_trace("${name}")
 endfunction()
 
-function(morelo_add_library name)
-    morelo_add_library_with_deps(NAME "${name}" SOURCES ${ARGN})
+function(inbacoin_add_library name)
+    inbacoin_add_library_with_deps(NAME "${name}" SOURCES ${ARGN})
 endfunction()
 
-function(morelo_add_library_with_deps)
-  cmake_parse_arguments(MORELO_ADD_LIBRARY "" "NAME" "DEPENDS;SOURCES" ${ARGN})
-  source_group("${MORELO_ADD_LIBRARY_NAME}" FILES ${MORELO_ADD_LIBRARY_SOURCES})
+function(inbacoin_add_library_with_deps)
+  cmake_parse_arguments(INBACOIN_ADD_LIBRARY "" "NAME" "DEPENDS;SOURCES" ${ARGN})
+  source_group("${INBACOIN_ADD_LIBRARY_NAME}" FILES ${INBACOIN_ADD_LIBRARY_SOURCES})
 
   # Define a ("virtual") object library and an actual library that links those
   # objects together. The virtual libraries can be arbitrarily combined to link
   # any subset of objects into one library archive. This is used for releasing
   # libwallet, which combines multiple components.
-  set(objlib obj_${MORELO_ADD_LIBRARY_NAME})
-  add_library(${objlib} OBJECT ${MORELO_ADD_LIBRARY_SOURCES})
-  add_library("${MORELO_ADD_LIBRARY_NAME}" $<TARGET_OBJECTS:${objlib}>)
-  if(MORELO_ADD_LIBRARY_DEPENDS)
-    add_dependencies(${objlib} ${MORELO_ADD_LIBRARY_DEPENDS})
+  set(objlib obj_${INBACOIN_ADD_LIBRARY_NAME})
+  add_library(${objlib} OBJECT ${INBACOIN_ADD_LIBRARY_SOURCES})
+  add_library("${INBACOIN_ADD_LIBRARY_NAME}" $<TARGET_OBJECTS:${objlib}>)
+  if(INBACOIN_ADD_LIBRARY_DEPENDS)
+    add_dependencies(${objlib} ${INBACOIN_ADD_LIBRARY_DEPENDS})
   endif()
-  set_property(TARGET "${MORELO_ADD_LIBRARY_NAME}" PROPERTY FOLDER "libs")
+  set_property(TARGET "${INBACOIN_ADD_LIBRARY_NAME}" PROPERTY FOLDER "libs")
   target_compile_definitions(${objlib}
-    PRIVATE $<TARGET_PROPERTY:${MORELO_ADD_LIBRARY_NAME},INTERFACE_COMPILE_DEFINITIONS>)
+    PRIVATE $<TARGET_PROPERTY:${INBACOIN_ADD_LIBRARY_NAME},INTERFACE_COMPILE_DEFINITIONS>)
 endfunction()
 
 include(Version)
-morelo_add_library(version SOURCES ${CMAKE_BINARY_DIR}/version.cpp DEPENDS genversion)
+inbacoin_add_library(version SOURCES ${CMAKE_BINARY_DIR}/version.cpp DEPENDS genversion)
 
 add_subdirectory(common)
 add_subdirectory(crypto)
@@ -117,7 +117,7 @@ add_subdirectory(rpc_sig)
 add_subdirectory(blockchain_db)
 add_subdirectory(mnemonics)
 add_subdirectory(rpc)
-add_subdirectory(morelo_mq)
+add_subdirectory(inbacoin_mq)
 add_subdirectory(serialization)
 add_subdirectory(wallet)
 add_subdirectory(p2p)

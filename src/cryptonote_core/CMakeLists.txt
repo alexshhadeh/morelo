@@ -44,9 +44,9 @@ set(cryptonote_core_private_headers
   tx_sanity_check.h
   cryptonote_tx_utils.h)
 
-morelo_private_headers(cryptonote_core
+inbacoin_private_headers(cryptonote_core
   ${cryptonote_core_private_headers})
-morelo_add_library(cryptonote_core
+inbacoin_add_library(cryptonote_core
   ${cryptonote_core_sources}
   ${cryptonote_core_headers}
   ${cryptonote_core_private_headers})
@@ -59,7 +59,7 @@ target_link_libraries(cryptonote_core
     multisig
     ringct
     device
-    morelo_mq
+    inbacoin_mq
     daemonizer
     ${Boost_DATE_TIME_LIBRARY}
     ${Boost_PROGRAM_OPTIONS_LIBRARY}

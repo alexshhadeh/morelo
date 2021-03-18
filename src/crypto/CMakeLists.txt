@@ -74,9 +74,9 @@ set(crypto_private_headers
   skein.h
   skein_port.h)
 
-morelo_private_headers(cncrypto
+inbacoin_private_headers(cncrypto
   ${crypto_private_headers})
-morelo_add_library(cncrypto
+inbacoin_add_library(cncrypto
   ${crypto_sources}
   ${crypto_headers}
   ${crypto_private_headers})

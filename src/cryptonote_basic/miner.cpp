@@ -73,8 +73,8 @@
   #include <unistd.h>
 #endif
 
-#undef MORELO_DEFAULT_LOG_CATEGORY
-#define MORELO_DEFAULT_LOG_CATEGORY "miner"
+#undef INBACOIN_DEFAULT_LOG_CATEGORY
+#define INBACOIN_DEFAULT_LOG_CATEGORY "miner"
 
 using namespace epee;
 

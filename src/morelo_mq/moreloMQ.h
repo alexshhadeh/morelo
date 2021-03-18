@@ -72,7 +72,7 @@ using namespace cryptonote;
 using namespace rpc;
 
 
-namespace moreloMQ {
+namespace inbacoinMQ {
 
     constexpr auto QUIT = "QUIT";
     constexpr auto EVICT = "EVICT";
@@ -124,14 +124,14 @@ namespace moreloMQ {
     };
 
 
-    class MoreloNotifier: public INotifier {
+    class InbacoinNotifier: public INotifier {
         public:
-            MoreloNotifier(ZmqHandler& h);
-            ~MoreloNotifier();
-            MoreloNotifier(const MoreloNotifier&) = delete;
-            MoreloNotifier& operator=(const MoreloNotifier&) = delete;
-            MoreloNotifier(MoreloNotifier&&) = delete;
-            MoreloNotifier& operator=(MoreloNotifier&&) = delete;
+            InbacoinNotifier(ZmqHandler& h);
+            ~InbacoinNotifier();
+            InbacoinNotifier(const InbacoinNotifier&) = delete;
+            InbacoinNotifier& operator=(const InbacoinNotifier&) = delete;
+            InbacoinNotifier(InbacoinNotifier&&) = delete;
+            InbacoinNotifier& operator=(InbacoinNotifier&&) = delete;
             bool addTCPSocket(boost::string_ref address, boost::string_ref port, uint16_t max_clients);
             void run();
 			void stop();

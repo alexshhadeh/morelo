@@ -51,7 +51,7 @@
 using namespace cryptonote;
 
 
-namespace moreloMQ {
+namespace inbacoinMQ {
 
     class INotifier {
         public:

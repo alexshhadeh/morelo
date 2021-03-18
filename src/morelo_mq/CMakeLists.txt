@@ -42,26 +42,26 @@
 # STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF
 # THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-set(morelo_mq_sources
-  moreloMQ.cpp
+set(inbacoin_mq_sources
+  inbacoinMQ.cpp
   zmq_handler.cpp)
 
-set(morelo_mq_headers)
+set(inbacoin_mq_headers)
 
-set(morelo_mq_private_headers
-    moreloMQ.h
+set(inbacoin_mq_private_headers
+    inbacoinMQ.h
     INotifier.h
 	zmq_handler.h)
 
-morelo_private_headers(morelo_mq
-  ${morelo_mq_private_headers})
+inbacoin_private_headers(inbacoin_mq
+  ${inbacoin_mq_private_headers})
 
-morelo_add_library(morelo_mq
-  ${morelo_mq_sources}
-  ${morelo_mq_headers}
-  ${morelo_mq_private_headers})
+inbacoin_add_library(inbacoin_mq
+  ${inbacoin_mq_sources}
+  ${inbacoin_mq_headers}
+  ${inbacoin_mq_private_headers})
 
-target_link_libraries(morelo_mq
+target_link_libraries(inbacoin_mq
   LINK_PRIVATE
     common
     epee
@@ -74,5 +74,5 @@ target_link_libraries(morelo_mq
     libzmq
     ${EXTRA_LIBRARIES})
 
-add_dependencies(morelo_mq
+add_dependencies(inbacoin_mq
   version)

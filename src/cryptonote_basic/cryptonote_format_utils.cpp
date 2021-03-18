@@ -42,8 +42,8 @@
 
 using namespace epee;
 
-#undef MORELO_DEFAULT_LOG_CATEGORY
-#define MORELO_DEFAULT_LOG_CATEGORY "cn"
+#undef INBACOIN_DEFAULT_LOG_CATEGORY
+#define INBACOIN_DEFAULT_LOG_CATEGORY "cn"
 
 #define ENCRYPTED_PAYMENT_ID_TAIL 0x8d
 
@@ -938,7 +938,7 @@ namespace cryptonote
     switch (std::atomic_load(&default_decimal_point))
     {
       case 9:
-        return "MRL";
+        return "INC";
       case 6:
         return "milliMRL";
       case 3:

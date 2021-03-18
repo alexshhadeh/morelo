@@ -35,8 +35,8 @@
 #include "net/http_client.h"
 #include "download.h"
 
-#undef MORELO_DEFAULT_LOG_CATEGORY
-#define MORELO_DEFAULT_LOG_CATEGORY "net.dl"
+#undef INBACOIN_DEFAULT_LOG_CATEGORY
+#define INBACOIN_DEFAULT_LOG_CATEGORY "net.dl"
 
 namespace tools
 {

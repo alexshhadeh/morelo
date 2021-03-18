@@ -119,18 +119,18 @@ namespace lmdb
                 if (!txn)
                     return txn.error();
 
-                MORELO_PRECOND(*txn != nullptr);
+                INBACOIN_PRECOND(*txn != nullptr);
                 const auto wrote = f(*(*txn));
                 if (wrote)
                 {
-                    MORELO_CHECK(commit(std::move(*txn)));
+                    INBACOIN_CHECK(commit(std::move(*txn)));
                     return wrote;
                 }
                 if (wrote != lmdb::error(MDB_MAP_FULL))
                     return wrote;
 
                 txn->reset();
-                MORELO_CHECK(this->resize());
+                INBACOIN_CHECK(this->resize());
             }
             return {lmdb::error(MDB_MAP_FULL)};
         }

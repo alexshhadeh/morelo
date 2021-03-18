@@ -34,8 +34,8 @@
 #include "blockchain.h"
 #include "tx_sanity_check.h"
 
-#undef MORELO_DEFAULT_LOG_CATEGORY
-#define MORELO_DEFAULT_LOG_CATEGORY "verify"
+#undef INBACOIN_DEFAULT_LOG_CATEGORY
+#define INBACOIN_DEFAULT_LOG_CATEGORY "verify"
 
 namespace cryptonote
 {

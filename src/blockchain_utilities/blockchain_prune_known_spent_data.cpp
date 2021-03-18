@@ -36,8 +36,8 @@
 #include "blockchain_db/db_types.h"
 #include "version.h"
 
-#undef MORELO_DEFAULT_LOG_CATEGORY
-#define MORELO_DEFAULT_LOG_CATEGORY "bcutil"
+#undef INBACOIN_DEFAULT_LOG_CATEGORY
+#define INBACOIN_DEFAULT_LOG_CATEGORY "bcutil"
 
 namespace po = boost::program_options;
 using namespace epee;
@@ -147,12 +147,12 @@ int main(int argc, char* argv[])
 
   if (command_line::get_arg(vm, command_line::arg_help))
   {
-    std::cout << "Morelo '" << MORELO_RELEASE_NAME << "' (v" << MORELO_VERSION_FULL << ")" << ENDL << ENDL;
+    std::cout << "InbaCoin '" << INBACOIN_RELEASE_NAME << "' (v" << INBACOIN_VERSION_FULL << ")" << ENDL << ENDL;
     std::cout << desc_options << std::endl;
     return 1;
   }
 
-  mlog_configure(mlog_get_default_log_path("morelo-blockchain-prune-known-spent-data.log"), true);
+  mlog_configure(mlog_get_default_log_path("inbacoin-blockchain-prune-known-spent-data.log"), true);
   if (!command_line::is_arg_defaulted(vm, arg_log_level))
     mlog_set_log(command_line::get_arg(vm, arg_log_level).c_str());
   else

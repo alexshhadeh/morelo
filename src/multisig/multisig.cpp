@@ -35,8 +35,8 @@
 #include "cryptonote_basic/cryptonote_format_utils.h"
 #include "multisig.h"
 
-#undef MORELO_DEFAULT_LOG_CATEGORY
-#define MORELO_DEFAULT_LOG_CATEGORY "multisig"
+#undef INBACOIN_DEFAULT_LOG_CATEGORY
+#define INBACOIN_DEFAULT_LOG_CATEGORY "multisig"
 
 using namespace std;
 
