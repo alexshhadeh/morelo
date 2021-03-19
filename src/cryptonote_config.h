@@ -250,7 +250,7 @@ namespace config
      const uint64_t MINIMUM_BLOCK_SIZE_LIMIT = 1 * 1024 * 1024; // It is set to 1024kB (1MB)
      const uint8_t INBACOIN_GENESIS_BLOCK_MAJOR_VERSION = 1;
      const uint8_t INBACOIN_GENESIS_BLOCK_MINOR_VERSION = 1;
-     const uint8_t INBACOIN_BLOCK_UNLOCK_CONFIRMATIONS = 10; // How many blocks mined are needed to unlock block_reward.
+     const uint8_t INBACOIN_BLOCK_UNLOCK_CONFIRMATIONS = 18; // How many blocks mined are needed to unlock block_reward.
    }
 
    namespace tx_settings
