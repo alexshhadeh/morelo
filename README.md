@@ -8,7 +8,7 @@
 # InbaCoin (INC)
 
 Copyright (c) 2021 The InbaCoin Network.    
-Copyright (c) 2019-2021 The InbaCoin Network.    
+Copyright (c) 2019-2021 The Morelo Network.    
 Copyright (c) 2018-2021 The Arqma Network.    
 Copyright (c) 2014-2021 The Monero Project.  
 Portions Copyright (c) 2012-2013 The Cryptonote developers.
@@ -156,7 +156,7 @@ Install all dependencies at once on OSX:
 
 Clone recursively to pull-in needed submodule(s):
 
-`$ git clone https://github.com/inbacoin-network/inbacoin`
+`$ git clone https://github.com/alexshhadeh/InbaCoin`
 
 If you already have a repo cloned, initialize and update:
 
@@ -173,7 +173,7 @@ invokes cmake commands as needed.
 * Install the dependencies
 * Change to the root of the source code directory and build:
 
-        `$ cd inbacoin && make`
+        `$ cd InbaCoin && make`
 
 
     *Optional*: If your machine has several cores and enough memory, enable
@@ -184,7 +184,7 @@ invokes cmake commands as needed.
 
 * The resulting executables can be found in `build/release/bin`
 
-* Add `PATH="$PATH:$HOME/inbacoin/build/release/bin"` to `.profile`
+* Add `PATH="$PATH:$HOME/InbaCoin/build/release/bin"` to `.profile`
 
 * Run InbaCoin with `inbacoind --detach`
 
@@ -225,8 +225,8 @@ Tested on a Raspberry Pi Zero with a clean install of minimal Raspbian Stretch (
 ```
 * Clone inbacoin and checkout most recent release version:
 ```
-  git clone https://github.com/inbacoin-network/inbacoin.git
-	cd inbacoin
+  git clone https://github.com/alexshhadeh/inbacoin.git
+	cd InbaCoin
 
 ```
 * Build:
@@ -311,11 +311,11 @@ application.
 
 * Download InbaCoin with command:
 
-	`git clone https://github.com/inbacoin-network/inbacoin
+	`git clone https://github.com/alexshhadeh/InbaCoin
 
 * Change branch to last Release:
 
-	`cd inbacoin
+	`cd InbaCoin
 
 * Activate and update submodules:
 
@@ -594,7 +594,7 @@ Instructions for debugging suspected blockchain corruption as per @HYC
 
 There is an `mdb_stat` command in the LMDB source that can print statistics about the database but it's not routinely built. This can be built with the following command:
 
-`cd ~/inbacoin/external/db_drivers/liblmdb && make`
+`cd ~/InbaCoin/external/db_drivers/liblmdb && make`
 
 The output of `mdb_stat -ea <path to blockchain dir>` will indicate inconsistencies in the blocks, block_heights and block_info table.
 
