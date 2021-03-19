@@ -213,7 +213,7 @@ namespace config
    boost::uuids::uuid const NETWORK_ID = { {
        0xC2, 0x1F, 0x21, 0xA1, 0xFF, 0xFF, 0xF1, 0x11, 0x44, 0x11, 0xCF, 0xFF, 0xFF, 0x56, 0x13, 0x1B
      } }; // 
-   std::string const GENESIS_TX = "";
+   std::string const GENESIS_TX = "011201ff00011e026bc5c7db8a664f652d78adb587ac4d759c6757258b64ef9cba3c0354e64fb2e42101abca6a39c561d0897be183eb0143990eba201aa7d2c652ab0555d28bb4b70728";
    uint32_t const GENESIS_NONCE = 38001;
 
    namespace testnet
