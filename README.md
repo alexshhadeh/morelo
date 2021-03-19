@@ -311,11 +311,11 @@ application.
 
 * Download InbaCoin with command:
 
-	`git clone https://github.com/alexshhadeh/InbaCoin
+	`git clone https://github.com/alexshhadeh/InbaCoin`
 
 * Change branch to last Release:
 
-	`cd InbaCoin
+	`cd InbaCoin`
 
 * Activate and update submodules:
 
